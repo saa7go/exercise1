@@ -4,6 +4,9 @@ pipeline {
             label 'linux-agent-python'
             }
       }
+    triggers {
+        poolSCM 'H/5 * * * *'
+    }
     stages {
         stage('Build') {
             steps {
